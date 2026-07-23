@@ -1,0 +1,15 @@
+@config "../../tailwind.site.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+}
