@@ -8,6 +8,20 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../../vendor/tightenco/ziggy';
 import { initializeTheme } from './composables/useAppearance';
 
+import Swiper from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+declare global {
+    interface Window {
+        Swiper: typeof Swiper;
+    }
+}
+
+window.Swiper = Swiper;
+
 // Extend ImportMeta interface for Vite...
 declare module 'vite/client' {
     interface ImportMetaEnv {
